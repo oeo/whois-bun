@@ -58,27 +58,27 @@ Description:
   Patterns can be provided as arguments, file, or piped through stdin.
 
 Options:
-  --pattern PATTERN        Domain name pattern to check
+  --pattern PATTERN       Domain name pattern to check
                           Special chars: c (consonant), v (vowel), n (number),
                           l (letter), - (hyphen), _ (any char), LITERAL (exact text)
   --extensions LIST       Comma-separated list of extensions to check
                           Default: .com
-  --file PATH            Read patterns from file
-  --file-history PATH    Path to history file
+  --file PATH             Read patterns from file
+  --file-history PATH     Path to history file
                           Default: ./domain-check-history.bitmap
-  --file-available PATH  Path to available domains output file
+  --file-available PATH   Path to available domains output file
                           Default: ./available-domains.txt
-  --parallel N           Number of parallel whois lookups (default: 2)
-  --delayms N           Delay between checks in milliseconds (default: 100)
-  --help, -h            Display this help and exit
-  --version, -v         Output version information and exit
+  --parallel N            Number of parallel whois lookups (default: 2)
+  --delayms N             Delay between checks in milliseconds (default: 100)
+  --help, -h              Display this help and exit
+  --version, -v           Output version information and exit
 
 Examples:
-  ${name} --pattern "ccvvn.com"     Check pattern with consonants, vowels, number
-  ${name} --pattern "ll-ll.com"     Check pattern with letters and hyphen
-  ${name} --pattern "a_b_.com"      Check pattern with wildcards
+  ${name} --pattern "ccvvn"     Check pattern with consonants, vowels, number
+  ${name} --pattern "ll-ll"     Check pattern with letters and hyphen
+  ${name} --pattern "a_b"           Check pattern with wildcards
   ${name} --parallel 2              Run 2 whois lookups in parallel
-  ${name} --delayms 100            Use 100ms delay between checks
+  ${name} --delayms 100             Use 100ms delay between checks
   ${name} --file patterns.txt       Read patterns from file
   cat patterns.txt | ${name}        Pipe patterns from file
   echo "example.com" | ${name}      Check specific domains

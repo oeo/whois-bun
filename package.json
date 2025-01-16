@@ -1,6 +1,6 @@
 {
   "name": "whois-bun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Domain availability checker with pattern support",
   "main": "index.ts",
   "type": "module",
