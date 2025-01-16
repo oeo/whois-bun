@@ -51,7 +51,7 @@ const loadHistory = () => {
 
 const printUsage = () => {
   const name = 'domain-check';
-  console.log(`Usage: ${name} [options] [pattern...]
+  console.log(`Usage: ${name} --pattern <pattern> [options]
 
 Description:
   Check domain name availability using whois lookups.

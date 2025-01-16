@@ -27,8 +27,22 @@ bun install
 ## Usage
 
 ```bash
-whois-bun [options] [pattern...]
+whois-bun --pattern <pattern> [options]
 ```
+
+### Command Line Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `--pattern PATTERN` | Domain name pattern to check | - |
+| `--extensions LIST` | Comma-separated list of extensions | .com |
+| `--file PATH` | Read patterns from file | - |
+| `--file-history PATH` | Path to history file | ./domain-check-history.bitmap |
+| `--file-available PATH` | Path to available domains output | ./available-domains.txt |
+| `--parallel N` | Number of parallel whois lookups | 2 |
+| `--delayms N` | Delay between checks in milliseconds | 100 |
+| `--help, -h` | Display help and exit | - |
+| `--version, -v` | Output version information and exit | - |
 
 ### Pattern Syntax
 
@@ -58,20 +72,6 @@ echo "example" | whois-bun --extensions=.com
 # Run 5 parallel checks with 200ms delay
 whois-bun --pattern "ccvv" --extensions=.com --parallel 5 --delayms 200
 ```
-
-### Command Line Options
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| `--pattern PATTERN` | Domain name pattern to check | - |
-| `--extensions LIST` | Comma-separated list of extensions | .com |
-| `--file PATH` | Read patterns from file | - |
-| `--file-history PATH` | Path to history file | ./domain-check-history.bitmap |
-| `--file-available PATH` | Path to available domains output | ./available-domains.txt |
-| `--parallel N` | Number of parallel whois lookups | 2 |
-| `--delayms N` | Delay between checks in milliseconds | 100 |
-| `--help, -h` | Display help and exit | - |
-| `--version, -v` | Output version information and exit | - |
 
 ### Pattern File Format
 
